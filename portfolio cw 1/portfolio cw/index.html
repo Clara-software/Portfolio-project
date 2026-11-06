@@ -1,0 +1,239 @@
+<!DOCTYPE html>  
+ <!-- this code said that this is a html  -->
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8"> 
+   <!-- this code tells the browser how to translate the pages hidden numbers into the letters and symbols you see on the screen. -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <!-- # this code tell the brower to use the lated version of internet to display. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- # this code tell browser to make the webpage fit the device screen width and display at normal zoom on any device. -->
+   <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+   <!-- # is how to link html with my other main css file to the website. -->
+  <title>Portfolio</title>
+  <link rel="stylesheet" type="text/css"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"/>
+
+</head>
+
+
+<body>
+  <!-- overlay -->
+  <section id="overlay"></section>
+  
+  <!-- fontawesome -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <!-- Logo -->
+        <div class="navbar__logo">
+          <img src="./img/Website Logo.png" alt="Website Logo">
+        </div>
+        <!-- Links -->
+        <ul class="navbar__Links">
+          <li class="navbar__Link"><a href="index.html">Home</a> </li>
+          <li class="navbar__Link"><a href="index.html#About">About</a></li>
+          <li class="navbar__Link"><a href="index.html#Portfolio">Portfolio</a></li>
+          <li class ="navbar__Link">
+            <a href="index.html#footer"><button class="navbar__btn">Contact Me</button></a>
+          </li>
+      <!-- # the ul tag is used to create an unordered list in html. -->
+        </ul> 
+        
+        <div class="banner__socials">
+
+        <!-- Menu button -->
+          <div class="navbar__icons">
+            <div class="navbar__icon"></div>
+          </div> 
+        </div>
+
+      </nav>
+
+
+    </div>
+  </header>
+  <main>
+
+  <!-- banner -->
+    <section id="banner">
+      <div class="container">
+        <div class="banner__content">
+        <!-- image -->
+          <div class="banner__img">
+            <img src=".//img/banner.png" alt="Laptop logo">
+          </div>
+         <!-- heading -->
+          <div class="banner__heading">
+            <h1>Hello, I'm Huyen Khanh Nung</h1>
+            <p>A Computer Science student focused on web development, design, and creative problem-solving.</p>
+
+            <a href="index.html#About"><button class="banner__btn">View More</button></a>
+            <div class="banner__socials">
+              <a href="https://github.com/claranung">
+                <i class="fa-brands fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/clara-khanh-305a1a269">
+                <i class="fab fa-linkedin-in"></i></a>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- things ( I used all pictures below as samples from Canva)-->
+    <section id="Portfolio">
+      
+      <!-- decoration -->
+        <div class="Portfolio__dec">
+          <img src=".//img/lift1.png" alt="Decoration">
+        </div>
+
+        <div class="Portfolio__dec">
+          <img src=".//img/lift2.png" alt="Decoration">
+        </div>
+      <div class="container">
+      <!-- heading -->
+        <h2 >My Portfolio</h2>
+          <div class="project">
+            <img src=".//img/works1.png" alt="Block Party Poster Design">
+            <div class="project--heading"> 
+              <h3>Block Party Poster Design</h3>
+              <p>A modern event poster exploring bold typography and 3D visual elements.
+              This project focuses on layout hierarchy, visual balance, and expressive
+              graphic style to attract attention for a music event.</p>
+            </div>
+          </div>
+          <div class="project">
+            <img src=".//img/gamework.png" alt="Pixel Game Design">
+            <div class="project--heading"> 
+              <h3>Pixel Game Design</h3>
+              <p>A retro-style game design featuring pixel art and classic gameplay mechanics.
+              This project explores the nostalgic appeal of 8-bit graphics and simple yet engaging
+              game mechanics.</p>
+            </div>
+          </div>
+          <div class="project">
+            <img src=".//img/posterwork.png" alt="Group Poster Project">
+            <div class="project--heading"> 
+              <h3>Group Poster Project</h3>
+              <p>A collaborative poster design project exploring visual storytelling and teamwork in graphic design.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+ <!-- Home -->
+    <section id="About">
+      <div class="container">
+      <!-- heading -->
+        <h2>About Me</h2>
+
+        <!-- Introduction -->
+        <p>My name is <strong>Huyen Khanh Nung</strong>, and I am a <strong>first-year Computer Science student</strong>. My student ID (SUN) is <strong>250204346</strong>.
+        <blockquote>
+          <p><em>My goal is to build a strong foundation in programming and software development. I am passionate about technology, eager to learn, and excited to develop my skills in computing and software development.</em></p>
+        </blockquote>
+    <!-- Education -->
+        <section id="Education">
+          <h3>Education</h3>
+          <ul>
+            <li>Pursuing a Bachelor's degree in Computer Science</li>
+          </ul>
+        </section>
+    <!-- Work Experience -->
+        <section id="Work experience">
+          <h3>Work Experience</h3>
+          <ul>
+            <li>Currently seeking opportunities to gain practical experience in programming and software development</li>
+          </ul>
+        </section>
+
+    <!-- Skills -->
+        <section id="Skills">
+          <h3>Skills</h3>
+          
+            <!-- <li>Program languages ,Logo and Ranking </li> -->
+              <div class="programming-language">
+                <div class="language">
+                  <img src="./img/html.png" alt="HTML Logo">
+                  <p><strong>HTML:⭐⭐⭐⭐☆</strong></p>
+                </div>
+                <div class="language">
+                  <img src="./img/css.png" alt="CSS Logo">
+                  <p><strong>CSS:⭐⭐⭐☆☆</strong></p>
+                </div>
+                <div class="language">
+                  <img src="./img/js.png" alt="JavaScript Logo">
+                  <p><strong>JavaScript:⭐⭐☆☆☆</strong></p>
+                </div>
+            <!-- Other skills  -->
+          <ul>
+            <li>Programming Languages: Python</li>
+            <li>Web Development: HTML, CSS, JavaScript</li>
+            <li>Problem-solving and logical thinking</li>
+            <li>Responsive Web Design</li>
+          </ul>
+        </section>
+
+    <!-- Interests and Hobbies -->
+        <section id="Interests and Hobbies">
+          <h3>Interests and Hobbies</h3>
+          <ul>
+            <li>Exploring new technologies and programming trends</li>
+            <li>Solving coding challenges and participating in hackathons</li>
+            <li>Reading tech blogs and learning about AI, software, and hardware</li>
+            <li>[Other hobbies, e.g., sports, music, drawing]</li>
+          </ul>
+        </section>
+      </div>
+    </section>
+  </main>
+  <!-- footer -->
+    <footer id="footer">
+      <div class="container">
+        <!-- img -->
+        <div class="footer_img">
+          <img src=".//img/footer.png" alt="Website Logo">
+        </div>
+
+        <!-- heading -->
+
+        <div class="footer__heading">
+          <h2>Let's turn ideas into something real</h2>
+
+          <!-- contact -->
+          <div class="footer__btn">
+          
+            
+            <a href="contact.html"><button class="contact">Contact Me</button></a>
+            <i class="fa-sharp-duotone fa-thin fa-mailbox-open-letter"></i>
+            <p>(If you have any questions or would like to discuss potential opportunities, please feel free to reach out to me via this email.) </p>
+            
+          </div>
+          <div class="banner__socials">
+            <a href="https://github.com/claranung">
+                <i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/clara-khanh-305a1a269">
+                <i class="fab fa-linkedin-in"></i></a>
+          </div>
+      </div>
+    </footer>
+        
+  <!-- fontawe -->
+  <script
+   src="https://kit.fontawesome.com/38d65ffb4d.js" 
+   crossorigin="anonymous"></script>
+  <script src="./js/main.js"></script>
+   <!-- # js is a program languages which runs from top to bottom so if I put it on the Head and it appear an error or the script tries 
+  to acccess elements that haven't loaded yet , the page can stop displaying , so putting it on the Body could be safer.-->                                             
+</body>
+</html>
+
+<!-- Thank you -->

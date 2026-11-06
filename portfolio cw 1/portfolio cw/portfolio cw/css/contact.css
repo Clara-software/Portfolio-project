@@ -1,0 +1,120 @@
+*{
+  background-color:var(--light-color) ;
+
+}
+
+body{
+    font-family: 'Roboto';
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2{
+    color: var(--primary-color);
+    padding-top: 10px;
+    text-align: center;
+    font-size: 60px;
+    ;
+}
+
+input{
+  background-color: white;
+  width: 100%;
+  margin-left: 12%;
+  font-size:20px ;
+  padding: 16px 16px;
+  border-radius: 20px;
+  border-color: var(--dark-color);
+  margin-bottom: 20px;
+}
+
+textarea{
+  background-color: white;
+  width: 75%;
+  margin-left: 12%;
+  font-size:20px ;
+  padding: 16px 16px;
+  border-radius: 20px;
+  border-color: var(--dark-color);
+  margin-bottom: 25px;
+}
+
+input:focus-within{
+  outline: none;
+  border-width:3px ;
+  border-color: var(--secondary-color);
+}
+
+textarea:focus-within{
+  outline: none;
+  border-width:3px ;
+  border-color: var(--secondary-color);
+}
+
+/*** submit button *** */
+
+#submit{
+    font-size: 40px;
+}
+
+button{
+    text-align:center;
+    color:white;
+    background-color: var(--primary-color);
+    padding: 2.5rem 7rem;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: var(--smooth);
+    display: block;
+    margin: 40px auto;
+    
+    
+}
+
+button:hover{
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    transition: var(--smooth);
+    opacity: 88%;
+    cursor: pointer;
+}
+
+label{
+    font-size: 34px;
+    margin-left: 12%;
+    color: var(--primary-color);
+}
+
+/* contact methods */
+.contact-methods{
+    text-align: center;
+}
+
+.contact-methods label{
+  margin: 0 20px;
+  font-size: 35px;
+  color: var(--dark-color);
+}
+
+.contact-methods input{
+  width: auto;
+  margin-left: 8px;
+  transform: scale(2);
+
+}
+
+
+:root{
+    --primary-color: #780000;
+    --secondary-color: #c1121f;
+    --light-color: #fdf0d5;
+    --dark-color: #003049;
+   
+    --smooth: all 0.3s ease-in-out;
+}
+
+#submit{
+    font-size: 40px;
+}

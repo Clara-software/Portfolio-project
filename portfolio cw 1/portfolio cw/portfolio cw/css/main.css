@@ -1,0 +1,569 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto';
+   
+}
+
+img{
+    max-width: 100%;
+    width: 100%;
+    display: block;
+}
+
+.container{
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+button{
+    text-align:center;
+    color:#fdf0d5;
+    background-color: var(--primary-color);
+    padding: .8rem 2.5rem;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: var(--smooth);
+
+}
+
+button:hover{
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    transition: var(--smooth);
+}
+
+:root{
+    --primary-color: #780000;
+    --secondary-color: #c1121f;
+    --light-color: #fdf0d5;
+    --dark-color: #003049;
+   
+    --smooth: all 0.3s ease-in-out;
+}
+/* Overlay */
+#overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 4;
+    display: none;
+    transition: var(--smooth);
+}
+
+#overlay.show{
+    display: initial;
+}
+
+
+/* *** Header  *** */
+header{
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    top: 20px;
+    
+
+}
+
+.navbar{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    
+}
+
+/* Logo */
+.navbar__logo img{
+    width: 300px;
+    height: 100px;
+    object-fit: cover;
+}
+
+/* menu */
+.navbar__Links{
+    position: fixed;
+    display: flex;
+    
+    
+    flex: 1;
+    top: 0%;
+    left: 0%;
+    width: 60%;
+    height: 100%;
+    background-color: var(--light-color);
+    z-index: 5;
+    transition: var(--smooth); 
+    transform:translateX(-100%);
+    opacity:0;
+}
+
+.navbar__Links.navbar__open{
+    transform:translateX(0%);
+    opacity:1;
+    transition: var(--smooth); 
+}
+
+
+
+.navbar__Link{
+    list-style: none;
+    opacity: 1;
+    margin-bottom: 60px;
+}
+
+.navbar__Link a{
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: 500;
+    transition: var(--smooth);
+
+   
+}
+
+.navbar__Link a:hover{
+    color: var(--secondary-color);
+    transition: var(--smooth);
+    color: var(--light-color);
+    
+}
+
+/*  this part why i changed the light but the hover isn't changed when i click */
+.navbar__Link .navbar__btn{
+
+    font-size:1.2rem;
+    margin-left: 40px;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: .5rem 2rem;
+}
+
+
+.navbar__btn{
+    font-size:1.2rem;
+    margin-left: 50px;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.navbar__btn:hover{
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    transition: var(--smooth);
+}
+
+
+
+/* menu button*/
+.navbar__icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height:80px;
+    cursor: pointer;
+    transition: var(--smooth);
+    z-index: 6;
+}
+
+.navbar__icon{
+    width: 45px;
+    height: 6px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    transition: var(--smooth);
+    position: relative;
+}
+
+.navbar__icon::before,
+.navbar__icon::after{
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 6px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    transition: var(--smooth);
+}
+
+.navbar__icon::before{
+    transform: translateY(-12px);
+
+}
+
+.navbar__icon::after{
+    transform: translateY(12px);
+}
+
+@media (min-width: 992px){
+    .navbar__Links{
+        position: initial;
+        display: flex;
+        background-color: transparent;
+        transform: translateX(0%);
+        opacity: 1;
+        align-items: center;
+        justify-content:flex-end;
+    }
+
+    .navbar__Link{
+        margin-left: 40px;
+        color: var(--light-color);
+    }
+
+    .navbar__icons{
+        display: none;
+    }
+    .navbar__btn{
+        color: var(--dark-color);
+    }
+}
+
+
+/* *** Banner *** */
+.banner{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items:center;
+    z-index: -1;
+    justify-content: center;
+   
+
+}
+.banner__heading{
+    max-width: 700px;
+    text-align: center;
+    color: var(--primary-color)
+}
+.banner__heading h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 0.8em;
+    padding-top: 4em;
+}
+
+.banner__heading p{
+    font-weight: 500;
+    margin-bottom: 1.5em;
+    line-height: 2em;
+    font-size: 25px;
+}
+
+
+
+.banner__btn{
+    font-size: 2rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 100px;
+}
+.banner__socials{
+    margin-top: 3rem;
+    display: flex;
+    justify-content:space-evenly ;
+    font-size: 4rem;
+    flex-wrap: wrap;
+
+}
+
+.banner__socials a{
+    transition: var(--smooth);
+}
+
+.banner__socials a:hover{
+    color: var(--secondary-color);
+    transition: var(--smooth);
+}
+
+@media (min-width: 762px){
+    .banner__heading{
+        text-align: initial;
+        margin: 0%;
+        padding-top: 0%;
+    }
+    .banner__socials{
+        justify-content: flex-start;
+
+    }
+    .banner__socials a{
+        margin-right:45px ;
+    }
+    .banner_img{
+        width: 60%;
+        
+
+    }
+}
+
+/* *** Project *** */
+#Portfolio{
+    position: relative;
+    margin-top: 15em;
+    margin-top: 15em;
+}
+
+#Portfolio h2{
+   text-align: center;
+   color: var(--primary-color);
+   margin-bottom: 3em;
+   font-size: 100px;
+   
+   
+}
+/* decoration */
+.Portfolio__dec{
+    position: absolute;
+    height:auto;
+    z-index: -1;
+    width: 510px;
+    opacity: 1;
+    
+}
+
+.Portfolio__dec:nth-child(2){
+    top: auto;
+    left: auto;
+    bottom: 15%;
+    right: 0;
+    transform: translateX(40%);
+    z-index: -1;
+}
+.project {
+    margin: 3em 0;
+    padding: 2em;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+
+}
+
+.project img{
+    padding-bottom: 2em;
+}
+
+.project--heading{
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.project--heading p{
+    font-weight: 200;
+    line-height: 2em;
+    max-width:300px;
+    margin: 0% auto;
+    color: var(--dark-color);
+}
+
+@media(min-width:62em){
+    .project{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+    }
+    .project img {
+        width: 40%;
+        text-align: initial;
+    }
+    .project--heading{
+        max-width: 300px;
+        margin: 0%;
+    }
+
+    .project:nth-child(odd) img {
+        order:2;
+        width:40%;
+        padding-bottom: 0;
+    
+    }
+
+    .project--heading:nth-child(odd){
+        order:1;
+        width:45%;
+        text-align: initial;
+    }
+
+}
+
+#About{
+    color: var(--primary-color);
+    line-height: 2em;
+    margin-top: 3rem;
+}
+
+#About h3{
+   font-weight: 600;
+   color: var(--primary-color);
+}
+#About p,
+#About ul,
+#About li{
+    font-weight: 400;
+    color: var(--dark-color);
+    padding-left: 20px;
+}
+/* === Programming Languages Section === */
+.programming-languages {
+  display: flex;
+  justify-content: space-around; 
+  align-items: center; 
+  flex-wrap: wrap; 
+  margin: 2em 0;
+  padding: 1em;
+  background-color: var(--light-color); 
+  border: 2px solid var(--primary-color); 
+  border-radius: 10px;
+}
+
+.language {
+  text-align: center; 
+  margin: 1em;
+  width: 150px; 
+}
+
+.language img {
+  width: 80px; 
+  height: 80px; 
+  object-fit: contain;
+  margin-bottom: 0.5em;
+}
+
+.language p {
+  font-weight: bold;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+
+/* === Footer === */
+#footer {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+#footer button {
+    text-align:center;
+    color:#fdf0d5;
+    background-color: var(--primary-color);
+    padding: .8rem 2.5rem;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: var(--smooth);
+    font-size: 25px;
+
+}
+
+#footer button:hover{
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    transition: var(--smooth);
+}
+
+#footer p{
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+/*  i changed the footer img to be smaller than the banner */
+.footer__img{
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(25%);
+  z-index: -1;
+  
+}
+
+.footer__img {
+  width: 60%;
+  max-width: 400px;
+  height: auto;
+}
+
+.footer__heading h2  {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 1%;
+  padding-top: 1em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 4rem;
+  margin-bottom: 1em;
+  
+}
+
+/* contact me  */
+
+.footer__contact {
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.footer__contact a {
+  text-decoration: none;
+  color: var(--gray);
+  
+}
+
+.footer__dec {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-45%);
+  z-index: -1;
+}
+
+.banner__btn p {
+    font-weight: 500;
+    margin-bottom: 1.5em;
+    line-height: 2em;
+    font-size: 25px;
+    
+}
+
+@media (min-width: 62em) {
+  .footer__img {
+    top: -15%;
+    right: 0;
+    transform: translateX(32%);
+    width: 60%;
+ }
+    
+  .footer__heading {
+    text-align: initial;
+    margin: 0;
+    color: var(--primary-color);
+  }
+  .footer__contact {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+
